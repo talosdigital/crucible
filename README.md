@@ -12,18 +12,18 @@ This container exposes 2 ports:
 	* 8060 : for the crucible server
 
 ### Fig config (fig.yml)
-opt:
-  image: talosdigital/crucible
-  volumes:
-    - /opt
-  command: true
+	opt:
+	  image: talosdigital/crucible
+	  volumes:
+	    - /opt
+	  command: true
 
-db:
-  image: talosdigital/crucible
-  volumes_from:
-    - opt
-  ports:
-    - "8060:8060"
+	db:
+	  image: talosdigital/crucible
+	  volumes_from:
+	    - opt
+	  ports:
+	    - "8060:8060"
 
 ### Usage
 	fig up
